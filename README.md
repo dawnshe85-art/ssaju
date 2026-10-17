@@ -21,24 +21,20 @@ GitHub Pages로 배포하려면 저장소 Settings → Pages → Branch `main` /
 |:--|:--|
 | `index.html`, `app.js` | 웹사이트 화면·계산 연결 |
 | `base.css` | 공통 레이아웃 |
-| `themes/*.css`, `theme.js` | 디자인 시안 3종과 전환 버튼 (`?design=toraya` / `teamlab` / `hobonichi`) |
+| `theme.css` | 밤하늘 디자인 (색·글꼴·모양) |
 | `lib/ssaju.mjs` | 계산 엔진 (ssaju 0.2.0 빌드본) |
 | `vendor/ssaju/` | 원본 [golbin/ssaju](https://github.com/golbin/ssaju) 소스 사본 |
 
-## 디자인 시안
+## 디자인
 
-[awesome-design-md-jp](https://github.com/kzhrknt/awesome-design-md-jp)의 DESIGN.md를 바탕으로 만든 3가지 시안입니다. 화면 아래 버튼으로 바꿔볼 수 있습니다.
-
-- **A 전통 격조** — とらや: 흰 바탕, 짙은 남색, 명조 제목, 각진 모서리, 계절 파스텔
-- **B 밤하늘** — teamLab: 거의 검은 바탕, 무채색 UI, 오행 글자만 빛나는 색
-- **C 일기장** — ほぼ日: 둥근 카드, 여러 색의 파스텔, 넓은 행간과 자간, 굵은 검정 테두리
+[awesome-design-md-jp](https://github.com/kzhrknt/awesome-design-md-jp)의 teamLab DESIGN.md를 바탕으로 한 **밤하늘** 디자인입니다. 거의 검은 바탕(`#0e0f0e`)에 무채색 UI를 쓰고, 색은 오행 글자에만 빛나는 효과로 넣었습니다.
 
 ## 기능
 
 - 양력/음력(윤달) 입력, 시간 모름 처리, 진태양시(경도) 보정
 - 결과 링크 공유 (URL 해시에 입력값 저장)
 - AI용 요약(`toCompact`)·마크다운 전체(`toMarkdown`) 복사
-- 모바일·다크 모드 대응
+- 모바일 대응
 
 ## 라이선스
 

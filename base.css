@@ -1,4 +1,4 @@
-/* Shared layout. Each themes/*.css file defines the tokens below and adds its own touches. */
+/* Shared layout. theme.css defines the design tokens below and adds its own touches. */
 :root {
   --bg: #fff; --surface: #fff; --surface-2: #f5f5f5;
   --ink: #111; --ink-2: #555; --ink-3: #888;
@@ -195,26 +195,11 @@ form .btn-primary { font-size: 16px; height: 54px; }
 .export summary { cursor: pointer; color: var(--ink-3); font-size: 14px; }
 .export pre { text-align: left; white-space: pre-wrap; word-break: break-word; font-size: 12px; background: var(--surface-2); color: var(--ink); border-radius: var(--r-tile); padding: 16px; max-height: 420px; overflow: auto; letter-spacing: normal; }
 
-footer { background: var(--footer-bg); color: var(--footer-muted); padding: 48px 24px 112px; text-align: center; font-size: 14px; }
+footer { background: var(--footer-bg); color: var(--footer-muted); padding: 48px 24px 64px; text-align: center; font-size: 14px; }
 footer .foot-brand { color: var(--footer-ink); margin-bottom: 16px; }
 footer p { margin: 4px 0; }
 footer a { color: var(--footer-ink); }
 footer .muted { color: var(--footer-muted); font-size: 12px; opacity: .8; }
-
-/* design switcher (for comparing drafts) */
-.switcher {
-  position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 50;
-  display: flex; gap: 4px; padding: 4px; border-radius: 999px;
-  background: rgba(20, 20, 20, .88); backdrop-filter: blur(8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
-  font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; letter-spacing: normal;
-}
-.switcher button {
-  border: 0; border-radius: 999px; min-height: 36px; padding: 6px 14px; font-size: 13px;
-  background: transparent; color: #ccc; white-space: nowrap;
-}
-.switcher button[aria-pressed="true"] { background: #fff; color: #111; }
-.switcher button b { font-weight: 600; margin-right: 4px; }
 
 @media (max-width: 767px) {
   .hero { padding: 48px 16px 32px; }
@@ -234,6 +219,4 @@ footer .muted { color: var(--footer-muted); font-size: 12px; opacity: .8; }
   .chip.xs { width: 20px; height: 20px; font-size: 11px; }
   .dm { align-items: flex-start; }
   .chip.xl { width: 58px; height: 58px; font-size: 32px; }
-  .switcher button { padding: 6px 10px; font-size: 12px; }
-  .switcher button span { display: none; }
 }
