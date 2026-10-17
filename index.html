@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>싸주 · 나의 사주팔자</title>
+  <meta name="description" content="생년월일시로 사주 원국, 오행, 십성, 12운성, 신살, 대운·세운·월운을 바로 확인하세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="seal" aria-hidden="true">命</div>
+    <h1>싸주</h1>
+    <p class="tagline">생년월일시 하나로 펼쳐보는 나의 사주팔자</p>
+  </header>
+
+  <main>
+    <section class="card form-card">
+      <form id="saju-form" autocomplete="off">
+        <div class="row">
+          <label class="field">
+            <span>이름 <em>(선택)</em></span>
+            <input type="text" name="name" maxlength="20" placeholder="홍길동" />
+          </label>
+          <fieldset class="field seg">
+            <legend>성별</legend>
+            <label><input type="radio" name="gender" value="여" checked /><span>여성</span></label>
+            <label><input type="radio" name="gender" value="남" /><span>남성</span></label>
+          </fieldset>
+        </div>
+
+        <div class="row">
+          <fieldset class="field seg">
+            <legend>역법</legend>
+            <label><input type="radio" name="calendar" value="solar" checked /><span>양력</span></label>
+            <label><input type="radio" name="calendar" value="lunar" /><span>음력</span></label>
+          </fieldset>
+          <label class="field check" id="leap-wrap" hidden>
+            <input type="checkbox" name="leap" />
+            <span>윤달</span>
+          </label>
+        </div>
+
+        <div class="row">
+          <label class="field">
+            <span>생년월일</span>
+            <input type="date" name="date" required min="1900-01-01" max="2100-12-31" value="1995-05-15" />
+          </label>
+          <label class="field">
+            <span>태어난 시각</span>
+            <input type="time" name="time" value="09:30" />
+          </label>
+          <label class="field check">
+            <input type="checkbox" name="unknownTime" />
+            <span>시간 모름</span>
+          </label>
+        </div>
+
+        <details class="advanced-opts">
+          <summary>고급 설정</summary>
+          <label class="field check">
+            <input type="checkbox" name="lmt" />
+            <span>진태양시(지역 평균시) 보정</span>
+          </label>
+          <label class="field">
+            <span>출생지 경도</span>
+            <select name="longitude">
+              <option value="126.9784">서울 (126.98°E)</option>
+              <option value="129.0756">부산 (129.08°E)</option>
+              <option value="128.6014">대구 (128.60°E)</option>
+              <option value="126.7052">인천 (126.71°E)</option>
+              <option value="126.8526">광주 (126.85°E)</option>
+              <option value="127.3845">대전 (127.38°E)</option>
+              <option value="129.3114">울산 (129.31°E)</option>
+              <option value="128.8961">강릉 (128.90°E)</option>
+              <option value="126.5312">제주 (126.53°E)</option>
+            </select>
+          </label>
+        </details>
+
+        <button type="submit" class="primary">사주 보기</button>
+        <p class="form-error" id="form-error" role="alert"></p>
+      </form>
+    </section>
+
+    <div id="result" hidden></div>
+  </main>
+
+  <footer>
+    <p>계산 엔진: <a href="https://github.com/golbin/ssaju" target="_blank" rel="noopener">ssaju</a> (MIT) · 모든 계산은 브라우저 안에서만 이루어지며 입력값은 어디에도 전송되지 않습니다.</p>
+    <p class="muted">재미와 참고용입니다. 중요한 결정은 스스로의 판단으로!</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
