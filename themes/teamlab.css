@@ -1,0 +1,91 @@
+/* 시안 B — 밤하늘의 기운. Based on awesome-design-md-jp / teamlab DESIGN.md:
+   near-black #0e0f0e canvas, colorless UI (white / #999 / #5a5a5a), system Helvetica + Hiragino stack,
+   square corners, outline CTAs, tiny white badges. The only color comes from the "artwork" — here the five-element characters. */
+:root {
+  --bg: #0e0f0e; --surface: #0e0f0e; --surface-2: #161716;
+  --ink: #ffffff; --ink-2: #cfcfcf; --ink-3: #999999;
+  --line: #262826; --line-strong: #5a5a5a; --focus: #ffffff;
+  --font-body: Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-head: var(--font-body);
+  --head-weight: 700; --tracking: normal; --leading: 1.6;
+  --r-card: 0; --r-tile: 0; --r-btn: 0; --r-input: 0; --r-chip: 0;
+  --shadow-card: none;
+  --btn-bg: transparent; --btn-ink: #ffffff; --btn-line: #5a5a5a;
+  --btn2-bg: transparent; --btn2-ink: #ffffff; --btn2-line: #5a5a5a;
+  --seg-bg: transparent; --seg-on-bg: #ffffff; --seg-on-ink: #000000;
+  --footer-bg: #0e0f0e; --footer-ink: #ffffff; --footer-muted: #999999;
+  --now-bg: #161716; --now-line: #ffffff;
+  --good: #8ff0c4; --good-bg: transparent; --bad: #ff8a8f; --bad-bg: transparent;
+  /* luminous element "artwork" */
+  --wood: #3ddc97;  --wood-bg: rgba(61, 220, 151, .08);
+  --fire: #ff5a5f;  --fire-bg: rgba(255, 90, 95, .09);
+  --earth: #f5c04a; --earth-bg: rgba(245, 192, 74, .08);
+  --metal: #e8e8f0; --metal-bg: rgba(232, 232, 240, .07);
+  --water: #5aa9ff; --water-bg: rgba(90, 169, 255, .09);
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(90, 169, 255, .10), transparent 60%),
+    radial-gradient(800px 500px at 90% 30%, rgba(255, 90, 95, .06), transparent 60%),
+    radial-gradient(900px 600px at 10% 60%, rgba(61, 220, 151, .05), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+}
+.topnav { background: rgba(14, 15, 14, .85); backdrop-filter: blur(8px); border-bottom: 0; }
+.mark { border: 1px solid #fff; color: #fff; font-size: 15px; }
+.brand { font-size: 16px; font-weight: 700; letter-spacing: .02em; }
+.pill-link { font-size: 12px; }
+
+.eyebrow { background: #fff; color: #000; font-size: 10px; font-weight: 700; padding: 4px 8px; letter-spacing: .02em; }
+.hero { padding: 120px 16px 72px; }
+.hero h1 { font-size: 48px; line-height: 1.35; font-weight: 700; }
+.subtitle { color: #999; font-size: 16px; }
+
+.card { border: 0; border-top: 1px solid var(--line); background: transparent; padding: 40px 0; margin: 0; }
+.card h3 { font-size: 20px; line-height: 1.5; letter-spacing: .02em; }
+.card h3 small { color: #5a5a5a; }
+.form-card { border: 1px solid var(--line); padding: 32px; margin-bottom: 48px; background: rgba(255, 255, 255, .02); }
+input[type="text"], input[type="date"], input[type="time"], select { background: transparent; color-scheme: dark; }
+input:focus, select:focus { box-shadow: none; }
+.seg label { border: 1px solid #5a5a5a; padding: 0; }
+.seg label + label { border-left: 0; }
+.seg span { padding: 9px 22px; }
+.seg label:first-of-type, .seg label:last-of-type { padding: 0; }
+
+button:hover { border-color: #fff; }
+form .btn-primary { background: #fff; color: #000; border-color: #fff; font-weight: 700; letter-spacing: .1em; }
+form .btn-primary:hover { background: #ddd; }
+
+/* the characters are the art: glowing glyphs */
+.chip { background: var(--cb); color: var(--c); text-shadow: 0 0 12px var(--c); border: 1px solid color-mix(in srgb, var(--c) 30%, transparent); }
+.chip.lg, .chip.xl { box-shadow: 0 0 32px -6px var(--c); }
+.dot { box-shadow: 0 0 8px var(--c); }
+.stats li { background: transparent; border: 1px solid var(--line); }
+.board { padding: 0; }
+.pillar { background: rgba(255, 255, 255, .015); border-color: var(--line); }
+.pillar.me { box-shadow: none; border-color: #fff; }
+.p-label { font-size: 13px; letter-spacing: .1em; }
+.p-char { background: transparent; border: 0; padding: 14px 0; }
+.p-char .hz { font-size: 52px; font-weight: 300; text-shadow: 0 0 18px var(--c), 0 0 42px color-mix(in srgb, var(--c) 50%, transparent); }
+.p-char .ko { color: #999; }
+.tag { border-radius: 0; background: transparent; border: 1px solid #5a5a5a; color: #ccc; font-size: 11px; }
+.tag.good { border-color: color-mix(in srgb, var(--good) 50%, transparent); }
+.tag.bad { border-color: color-mix(in srgb, var(--bad) 50%, transparent); }
+.fill { box-shadow: 0 0 12px var(--c); }
+.bar { height: 4px; }
+.interp { background: transparent; border: 1px solid var(--line); }
+.luck { background: transparent; }
+.luck.now { box-shadow: none; background: rgba(255, 255, 255, .04); }
+.manse > div { background: transparent; border: 1px solid var(--line); }
+.export pre { background: #161716; }
+footer { border-top: 1px solid var(--line); }
+footer .foot-brand { font-size: 16px; font-weight: 700; }
+
+@media (max-width: 767px) {
+  .hero { padding: 72px 16px 48px; }
+  .hero h1 { font-size: 30px; }
+  .form-card { padding: 20px 16px; }
+  .p-char .hz { font-size: 34px; }
+}

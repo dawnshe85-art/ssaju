@@ -1,0 +1,67 @@
+/* 시안 A — 전통 격조. Based on awesome-design-md-jp / toraya DESIGN.md:
+   pure white, deep navy brand, Mincho headings, square corners, white pill CTA (2px #ccc), seasonal pastels, flat. */
+:root {
+  --bg: #ffffff; --surface: #ffffff; --surface-2: #f2f1f1;
+  --ink: #111111; --ink-2: #444444; --ink-3: #777777;
+  --line: #e5e7eb; --line-strong: #cccccc; --focus: #27455c;
+  --navy: #27455c;
+  --font-body: "Noto Sans KR", "Yu Gothic Medium", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif;
+  --font-head: "Noto Serif KR", "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --head-weight: 400; --tracking: normal; --leading: 1.6;
+  --r-card: 0; --r-tile: 0; --r-btn: 23px; --r-input: 0; --r-chip: 0;
+  --shadow-card: none;
+  --btn-bg: #ffffff; --btn-ink: #111111; --btn-line: #cccccc;
+  --btn2-bg: #ffffff; --btn2-ink: #111111; --btn2-line: #cccccc;
+  --seg-bg: #f2f1f1; --seg-on-bg: #27455c; --seg-on-ink: #ffffff;
+  --footer-bg: #27455c; --footer-ink: #ffffff; --footer-muted: #c9d3dc;
+  --now-bg: #f4f6f8; --now-line: #27455c;
+  --good: #3a7c4f; --good-bg: #d6e2db; --bad: #8e3550; --bad-bg: #eee0e9;
+  /* seasonal pastels */
+  --wood: #3a6b52;  --wood-bg: #d6e2db;
+  --fire: #8e3550;  --fire-bg: #eee0e9;
+  --earth: #85672a; --earth-bg: #efe7d4;
+  --metal: #555555; --metal-bg: #f2f1f1;
+  --water: #27455c; --water-bg: #dbe3ea;
+  color-scheme: light;
+}
+
+.topnav { height: 72px; border-bottom-color: #ececec; }
+.mark { background: var(--navy); color: #fff; width: 34px; height: 34px; }
+.brand { letter-spacing: .1em; }
+
+.eyebrow { font-family: var(--font-head); color: var(--navy); letter-spacing: .3em; font-size: 13px; }
+.eyebrow::before, .eyebrow::after { content: ""; display: inline-block; width: 24px; height: 1px; background: currentColor; vertical-align: middle; margin: 0 12px; }
+.hero { padding-top: 96px; }
+.hero h1 { font-size: 40px; line-height: 1.5; }
+
+.card { border: 0; border-top: 1px solid #111; padding: 32px 0 40px; background: transparent; margin-bottom: 8px; }
+.card h3 { font-size: 26px; line-height: 1.58; margin-bottom: 24px; }
+.form-card { background: #f2f1f1; border-top: 0; padding: 40px; margin-bottom: 48px; }
+.form-card input[type="text"], .form-card input[type="date"], .form-card input[type="time"], .form-card select { background: #fff; }
+.form-card .seg label { background: #fff; }
+.summary { background: transparent; }
+
+button { font-weight: 700; border-width: 2px; }
+button:hover { border-color: #111; background: #f2f1f1; }
+form .btn-primary { background: var(--navy); color: #fff; border-color: var(--navy); letter-spacing: .2em; }
+form .btn-primary:hover { background: #1d3546; border-color: #1d3546; }
+
+.chip { font-weight: 500; }
+.stats li { background: #f7f7f6; border-left: 3px solid var(--navy); }
+.board { background: #fbfaf8; padding: 20px; border: 1px solid #ececec; }
+.pillar { border-color: #e5e5e5; }
+.pillar.me { box-shadow: none; border: 2px solid var(--navy); }
+.p-label { letter-spacing: .1em; }
+.p-char .hz { font-weight: 500; }
+.interp { background: transparent; border-left: 3px solid var(--navy); padding: 0 20px; }
+.luck.now { box-shadow: none; border: 2px solid var(--navy); }
+.export { background: transparent; }
+.export pre { background: #f2f1f1; }
+footer .foot-brand { font-size: 22px; letter-spacing: .1em; }
+footer .mark { background: #fff; color: var(--navy); }
+
+@media (max-width: 767px) {
+  .hero h1 { font-size: 28px; }
+  .card h3 { font-size: 20px; }
+  .form-card { padding: 24px 16px; }
+}

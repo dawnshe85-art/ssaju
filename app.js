@@ -233,7 +233,7 @@ function renderPillars(r, p) {
   <section class="card">
     <h3>사주 원국 <small>四柱八字</small></h3>
     <div class="board"><div class="pillars">${cols}</div></div>
-    <p class="legend">${EL_ORDER.map((e) => `<span class="dot el-${EL_KEY[e]}"></span>${e}(${EL_HANJA[e]})`).join(" ")}</p>
+    <p class="legend">${EL_ORDER.map((e) => `<span class="lg-item"><span class="dot el-${EL_KEY[e]}"></span>${e}(${EL_HANJA[e]})</span>`).join(" ")}</p>
   </section>`;
 }
 

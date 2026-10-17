@@ -19,9 +19,19 @@ GitHub Pages로 배포하려면 저장소 Settings → Pages → Branch `main` /
 
 | 경로 | 내용 |
 |:--|:--|
-| `index.html`, `styles.css`, `app.js` | 웹사이트 화면 |
+| `index.html`, `app.js` | 웹사이트 화면·계산 연결 |
+| `base.css` | 공통 레이아웃 |
+| `themes/*.css`, `theme.js` | 디자인 시안 3종과 전환 버튼 (`?design=toraya` / `teamlab` / `hobonichi`) |
 | `lib/ssaju.mjs` | 계산 엔진 (ssaju 0.2.0 빌드본) |
 | `vendor/ssaju/` | 원본 [golbin/ssaju](https://github.com/golbin/ssaju) 소스 사본 |
+
+## 디자인 시안
+
+[awesome-design-md-jp](https://github.com/kzhrknt/awesome-design-md-jp)의 DESIGN.md를 바탕으로 만든 3가지 시안입니다. 화면 아래 버튼으로 바꿔볼 수 있습니다.
+
+- **A 전통 격조** — とらや: 흰 바탕, 짙은 남색, 명조 제목, 각진 모서리, 계절 파스텔
+- **B 밤하늘** — teamLab: 거의 검은 바탕, 무채색 UI, 오행 글자만 빛나는 색
+- **C 일기장** — ほぼ日: 둥근 카드, 여러 색의 파스텔, 넓은 행간과 자간, 굵은 검정 테두리
 
 ## 기능
 

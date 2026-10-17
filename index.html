@@ -7,8 +7,10 @@
   <meta name="description" content="생년월일시로 사주 원국, 오행, 십성, 12운성, 신살, 대운·세운·월운을 바로 확인하세요." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" id="theme-css" href="themes/toraya.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
   <nav class="topnav">
@@ -17,7 +19,7 @@
   </nav>
 
   <header class="hero">
-    <span class="badge-yellow">무료 · 설치 없음 · 0.04ms 계산</span>
+    <span class="eyebrow">四柱八字</span>
     <h1>생년월일시 하나로<br />펼쳐보는 나의 사주팔자</h1>
     <p class="subtitle">원국, 오행, 십성, 신살부터 대운·세운·월운까지 한 장의 보드에 정리해 드려요.</p>
   </header>
@@ -99,6 +101,12 @@
     <p>계산 엔진: <a href="https://github.com/golbin/ssaju" target="_blank" rel="noopener">ssaju</a> (MIT) · 모든 계산은 브라우저 안에서만 이루어지며 입력값은 어디에도 전송되지 않습니다.</p>
     <p class="muted">재미와 참고용입니다. 중요한 결정은 스스로의 판단으로!</p>
   </footer>
+
+  <nav class="switcher" aria-label="디자인 시안 선택">
+    <button type="button" data-design="toraya"><b>A</b><span>전통 격조</span></button>
+    <button type="button" data-design="teamlab"><b>B</b><span>밤하늘</span></button>
+    <button type="button" data-design="hobonichi"><b>C</b><span>일기장</span></button>
+  </nav>
 
   <script type="module" src="app.js"></script>
 </body>
