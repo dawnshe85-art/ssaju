@@ -180,7 +180,7 @@ function renderSummary(r, p) {
   const yb = r.pillarDetails.year.branch;
   const adv = r.advanced;
   return `
-  <section class="card summary">
+  <section class="card card-feature summary">
     <div class="summary-head">
       <div>
         <h2>${esc(p.name || "나")}의 사주</h2>
@@ -232,7 +232,7 @@ function renderPillars(r, p) {
   return `
   <section class="card">
     <h3>사주 원국 <small>四柱八字</small></h3>
-    <div class="pillars">${cols}</div>
+    <div class="board"><div class="pillars">${cols}</div></div>
     <p class="legend">${EL_ORDER.map((e) => `<span class="dot el-${EL_KEY[e]}"></span>${e}(${EL_HANJA[e]})`).join(" ")}</p>
   </section>`;
 }
@@ -392,7 +392,7 @@ function renderExport() {
     <h3>내보내기</h3>
     <p class="muted">ChatGPT·Claude 같은 AI에게 붙여넣고 “이 사주를 해석해줘”라고 물어보세요.</p>
     <div class="btns">
-      <button type="button" data-copy="compact">AI용 요약 복사</button>
+      <button type="button" class="btn-primary" data-copy="compact">AI용 요약 복사</button>
       <button type="button" data-copy="markdown">마크다운 전체 복사</button>
       <button type="button" data-copy="link">결과 링크 복사</button>
     </div>

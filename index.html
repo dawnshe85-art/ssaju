@@ -7,14 +7,19 @@
   <meta name="description" content="생년월일시로 사주 원국, 오행, 십성, 12운성, 신살, 대운·세운·월운을 바로 확인하세요." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="topnav">
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">命</span>싸주</a>
+    <a class="pill-link" href="https://github.com/dawnshe85-art/ssaju" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+
   <header class="hero">
-    <div class="seal" aria-hidden="true">命</div>
-    <h1>싸주</h1>
-    <p class="tagline">생년월일시 하나로 펼쳐보는 나의 사주팔자</p>
+    <span class="badge-yellow">무료 · 설치 없음 · 0.04ms 계산</span>
+    <h1>생년월일시 하나로<br />펼쳐보는 나의 사주팔자</h1>
+    <p class="subtitle">원국, 오행, 십성, 신살부터 대운·세운·월운까지 한 장의 보드에 정리해 드려요.</p>
   </header>
 
   <main>
@@ -81,7 +86,7 @@
           </label>
         </details>
 
-        <button type="submit" class="primary">사주 보기</button>
+        <button type="submit" class="btn-primary">사주 보기</button>
         <p class="form-error" id="form-error" role="alert"></p>
       </form>
     </section>
@@ -90,6 +95,7 @@
   </main>
 
   <footer>
+    <div class="foot-brand"><span class="mark" aria-hidden="true">命</span>싸주</div>
     <p>계산 엔진: <a href="https://github.com/golbin/ssaju" target="_blank" rel="noopener">ssaju</a> (MIT) · 모든 계산은 브라우저 안에서만 이루어지며 입력값은 어디에도 전송되지 않습니다.</p>
     <p class="muted">재미와 참고용입니다. 중요한 결정은 스스로의 판단으로!</p>
   </footer>
